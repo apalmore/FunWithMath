@@ -1,0 +1,66 @@
+package com.austinpalmore.fun_with_math;
+public class Search {
+	public final static int ARRAY_SIZE = 20;
+	
+	protected static void binarySearch() {
+		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
+		System.out.println("Creating Random set of 20 values non repeting [0,100]");
+		printArr(set);
+		System.out.println("Sorting Set...");
+		boubbleSort(set);
+		printArr(set);
+		System.out.print("Enter a number in the array: ");
+		int query = MainMenu.getInt(new java.util.Scanner(System.in));
+		System.out.println("Searching for " + query);
+		int index = binary(set,0,set.length,query);
+		if (index > 0) System.out.println(query + " Was found at index " + index);
+		else System.out.println(query + " is not contained in theis array");
+	}
+	protected static int binary(int arr[],int left,int right,int query) {
+		int mid = (right + left) / 2;
+		if(mid == left || mid == right) return -1;
+		System.out.println("Searching index " + mid + " [" + arr[mid] + "]");
+		if(arr[mid] == query) return mid;
+		else if (arr[mid] > query) return binary(arr,left,mid,query);
+		else return binary(arr,mid,right,query);
+	}
+	protected static void lenearSearch() {
+		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
+		System.out.println("Creating Random set of 20 values non repeting [0,100]");
+		printArr(set);
+		System.out.println("Sorting Set...");
+		boubbleSort(set);
+		printArr(set);
+		System.out.print("Enter a number in the array: ");
+		int query = MainMenu.getInt(new java.util.Scanner(System.in));
+		System.out.println("Searching for " + query);
+		int index = -1;
+		for(int i = 0;i < set.length && index < 0;i++) {
+			System.out.println("Seraching index " + i);
+			if(set[i] == query) index = i;
+		}
+		if (index > 0) System.out.println(query + " Was found at index " + index);
+		else System.out.println(query + " is not contained in theis array");
+	}
+
+	private static void printArr(int arr[]) {
+		if(arr.length > 0) System.out.printf("[%3d]",arr[0]);
+		for(int i = 1; i < arr.length;i++)
+		       System.out.printf(",[%3d]",arr[i]);
+		System.out.println();
+	}
+	private static void boubbleSort(int[] arr) {
+		boolean swap = false;
+		do {
+			swap = false;
+			for (int i = 0;i < arr.length - 1;i++) {
+				if(arr[i] > arr[i+1]) {
+					swap = true;
+					int tmp = arr[i+1];
+					arr[i+1] = arr[i];
+					arr[i] = tmp;
+				}
+			}
+		} while (swap);
+	}	
+}

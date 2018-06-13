@@ -1,0 +1,4 @@
+Main-Class: com.austinpalmore.fun_with_math.Main
+Specification-Title: Fun With Math
+Name: com/austinpalmore/fun_with_math/
+Sealed: true

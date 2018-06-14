@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.algorithms;
 public class QuickSort extends Sort {
 	QuickSort(int n) {
 		super(n);

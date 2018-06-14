@@ -1,9 +1,9 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.util;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class Display {
-	protected void DisplayTextBox(final String title, final String text) {
+	public void DisplayTextBox(final String title, final String text) {
 		(new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -11,7 +11,7 @@ public class Display {
 			}
 		})).start();
 	}
-	protected static void DisplayMessage(String m) {
+	public static void DisplayMessage(String m) {
 		final String message = m;
 		(new Thread(new Runnable() {
 			@Override
@@ -20,7 +20,7 @@ public class Display {
 			}
 		})).start();
 	}
-	protected static int getIntFromUser(String prompt, Tester t) {
+	public static int getIntFromUser(String prompt, Tester t) {
 		int i = -1;
 		java.util.Scanner consul = null;
 		while (t.test(i)) {
@@ -37,7 +37,7 @@ public class Display {
 		}
 		return i;
 	}
-	protected static String getStringFromUser(String prompt, Tester t) {
+	public static String getStringFromUser(String prompt, Tester t) {
 		String s = "";
 		while (t.test(s)) {
 			try {

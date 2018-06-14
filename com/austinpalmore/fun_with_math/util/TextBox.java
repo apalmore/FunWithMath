@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.util;
 @SuppressWarnings("serial")
 public final class TextBox extends javax.swing.JFrame{
 	protected TextBox(String title, String text){

@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.algorithms;
 public class EuclidsAlgorithm {
 	public static void driver() {
 		System.out.println("Enter a number: ");

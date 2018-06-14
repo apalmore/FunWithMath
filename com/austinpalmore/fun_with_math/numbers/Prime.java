@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.numbers;
 final public class Prime {
 	protected static long numberOfPrimes = 0;
 	protected static synchronized void counter() { numberOfPrimes++; }

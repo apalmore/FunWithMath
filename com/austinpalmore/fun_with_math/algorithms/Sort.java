@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.algorithms;
 public class Sort {
 	int[] arr;
 	int[] changed = new int[1];

@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.probability;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

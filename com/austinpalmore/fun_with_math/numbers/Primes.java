@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.numbers;
 final public class Primes {
 	private int lcs = 1;
 	private String primes = "";
@@ -99,17 +99,17 @@ final public class Primes {
 		sb.append("\n");
 		return sb.toString();
 	}
-	public static void driver(Display display, java.util.Scanner scan) {
+	public static void driver(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan) {
 		final int threadCount = Runtime.getRuntime().availableProcessors();
 		String message = "Enter the max range for the prime function that is a multiple of " + threadCount + " and greater than " + threadCount * 2 + ": ";
-		int max = Display.getIntFromUser(message,new Tester() {
+		int max = com.austinpalmore.fun_with_math.util.Display.getIntFromUser(message,new com.austinpalmore.fun_with_math.util.Tester() {
 			@Override
 			public boolean test(int n) {
 				return n % Runtime.getRuntime().availableProcessors() != 0 || n <= (Runtime.getRuntime().availableProcessors() * 2);
 			}
 		});
 		final int primesPerThread = max / threadCount;
-		Display.DisplayMessage("I predict that there will be " + Primes.logical.getPrimeCountEstimation(primesPerThread * threadCount) + " Primes to " + primesPerThread * threadCount);
+		com.austinpalmore.fun_with_math.util.Display.DisplayMessage("I predict that there will be " + Primes.logical.getPrimeCountEstimation(primesPerThread * threadCount) + " Primes to " + primesPerThread * threadCount);
 
 		Primes[] p = new Primes[threadCount];
 		for (int i = 0;i < threadCount;i++) p[i] = new Primes();

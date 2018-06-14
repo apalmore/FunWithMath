@@ -1,13 +1,13 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.cryptograpy;
 public class Rot13 {
 	protected static void driver() {
-		String s = Display.getStringFromUser("Enter a Message to be encoded", new Tester() {
+		String s = com.austinpalmore.fun_with_math.util.Display.getStringFromUser("Enter a Message to be encoded", new com.austinpalmore.fun_with_math.util.Tester() {
 			@Override
 			public boolean test(String s) {
 				return s.equals("");
 			}
 		});
-		Display.DisplayMessage(permutate(s));
+		com.austinpalmore.fun_with_math.util.Display.DisplayMessage(permutate(s));
 	}
 	private static String permutate(String s) {
 		String ps = "";

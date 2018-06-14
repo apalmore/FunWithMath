@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.algorithms;
 public class RandomSet {
 	protected static int[] getSet(int size) {
 		final int[] rand_set = new int[size];

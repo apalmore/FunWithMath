@@ -1,14 +1,14 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.algorithms;
 public class Algorithms {
 	private static String items[] = { "Exit","Euclid's Algorithum", "Boubble Sort", "Simple Search", "Binary Search" };
 	private static String messages[] = {"Welcome To Fun With Algorithms","Pleze Select A Item from the menu below"};
 
-	Algorithms(Display display, java.util.Scanner scan) {
+	public Algorithms(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan) {
 		boolean run = true;
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > items.length) {
-				new Menu(items,messages);
+				new com.austinpalmore.fun_with_math.Menu(items,messages);
 				input = getInt(scan);
 			}
 			switch (input) {
@@ -42,12 +42,12 @@ public class Algorithms {
 			}
 		}
 	}
-	protected void pauseForEnter(java.util.Scanner s) {
+	public void pauseForEnter(java.util.Scanner s) {
 		System.out.println("Press Enter To Retern to Main Menu...");
 		s.nextLine();
 		s.nextLine();
 	}
-	protected static int getInt(java.util.Scanner console) {
+	public static int getInt(java.util.Scanner console) {
 		while(!console.hasNextInt()) {
 			console.next();
 			System.err.print("\nEnter a intiger: ");

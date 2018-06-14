@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.util;
 public class Tester {
 	public boolean test(int n) {
 		return false;

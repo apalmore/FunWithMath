@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="183.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.austinpalmore.fun_with_math.FXMLDocumentController">
+   <children>
+      <ToggleButton layoutX="96.0" layoutY="129.0" mnemonicParsing="false" onAction="#newRandomPick" prefHeight="25.0" prefWidth="113.0" text="New Random Pick" />
+      <Spinner fx:id="Pick_1" editable="true" layoutX="2.0" layoutY="84.0" prefHeight="39.0" prefWidth="60.0" />
+      <Spinner fx:id="Pick_2" editable="true" layoutX="62.0" layoutY="84.0" prefHeight="39.0" prefWidth="60.0" />
+      <Spinner fx:id="Pick_3" editable="true" layoutX="122.0" layoutY="84.0" prefHeight="39.0" prefWidth="60.0" />
+      <Spinner fx:id="Pick_4" editable="true" layoutX="182.0" layoutY="84.0" prefHeight="39.0" prefWidth="60.0" />
+      <Spinner fx:id="Pick_5" editable="true" layoutX="242.0" layoutY="84.0" prefHeight="39.0" prefWidth="60.0" />
+      <Spinner fx:id="Pick_6" editable="true" layoutX="302.0" layoutY="84.0" prefHeight="39.0" prefWidth="60.0" />
+      <ToggleButton layoutX="216.0" layoutY="129.0" mnemonicParsing="false" onAction="#spin" text="Spin" textFill="#0d00ff" />
+      <Label fx:id="Label_1" layoutX="12.0" layoutY="8.0" prefHeight="36.0" prefWidth="40.0" text=" ??" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Label_2" layoutX="72.0" layoutY="8.0" prefHeight="36.0" prefWidth="40.0" text=" ??" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Label_3" layoutX="132.0" layoutY="8.0" prefHeight="36.0" prefWidth="40.0" text=" ??" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Label_4" layoutX="192.0" layoutY="8.0" prefHeight="36.0" prefWidth="32.0" text=" ??" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Label_5" layoutX="252.0" layoutY="8.0" prefHeight="36.0" prefWidth="40.0" text=" ??" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Label_6" layoutX="312.0" layoutY="8.0" prefHeight="36.0" prefWidth="40.0" text=" ??" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Submited" layoutX="4.0" layoutY="48.0" prefHeight="36.0" prefWidth="355.0" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

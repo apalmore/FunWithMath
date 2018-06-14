@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.numbers;
 public class Fibinacci {
 	static long[] fibinacci_cache = new long[1000];
 	public static long fibinacci(int n){

@@ -2,14 +2,13 @@ package com.austinpalmore.fun_with_math;
 public class Algorithms {
 	private static String items[] = { "Exit","Euclid's Algorithum", "Boubble Sort", "Simple Search", "Binary Search" };
 	private static String messages[] = {"Welcome To Fun With Algorithms","Pleze Select A Item from the menu below"};
-	private static boolean underDevelopment[] = { false,false,false,false,false };
 
 	Algorithms(Display display, java.util.Scanner scan) {
 		boolean run = true;
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > items.length) {
-				new Menu(items,messages,underDevelopment);
+				new Menu(items,messages);
 				input = getInt(scan);
 			}
 			switch (input) {

@@ -2,13 +2,12 @@ package com.austinpalmore.fun_with_math;
 public class Numbers {
 	protected static String items[] = { "Exit","Fun With Primes", "Fibinachi Numbers" };
 	protected static String messages[] = {"Welcome To Fun With Numbers","Pleze Select A Item from the menu below"};
-	protected static boolean underDevelopment[] = { false,false,false };
 	Numbers(Display display, java.util.Scanner scan) {
 		boolean run = true;
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > 2) {
-				new Menu(items,messages,underDevelopment);
+				new Menu(items,messages);
 				input = getInt(scan);
 			}
 			switch (input) {

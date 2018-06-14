@@ -2,16 +2,15 @@ package com.austinpalmore.fun_with_math;
 public class MainMenu {
 	final static protected Display display = new Display();
 	final static protected java.util.Scanner console = new java.util.Scanner(System.in);
-	protected static String items[] = { "Exit","Numbers", "Algorithms", "Cryptograpy" };
+	protected static String items[] = { "Exit","Numbers", "Algorithms", "Cryptograpy","Probability" };
 	protected static String messages[] = {"Welcome To Fun With Math By Austin Palmore","Pleze Select A Item from the menu below"};
-	protected static boolean underDevelopment[] = { false,false,false,false };
-	MainMenu() {
+	MainMenu(String args[]) {
 		boolean run = true;
 		int input = -1;
 		java.util.Scanner console = new java.util.Scanner(System.in);
 		while(run) {
 			while(input < 0 || input > items.length) {
-				new Menu(items,messages,underDevelopment);
+				new Menu(items,messages);
 				input = getInt(console);
 			}
 			switch (input) {
@@ -32,7 +31,7 @@ public class MainMenu {
 					input = -1;
 					break;
 				case 4:
-					new Probability(display,console);
+					new Probability(display,console,args);
 					input = -1;
 					break;
 				/*

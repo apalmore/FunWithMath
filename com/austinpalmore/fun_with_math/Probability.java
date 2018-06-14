@@ -17,7 +17,7 @@ public class Probability {
 					run = false;
 					break;
 				case 1:
-					System.out.println("This is not yet avaliable");
+					LotteryGame.driver();
 					input = -1;
 					pauseForEnter(scan);
 					break;

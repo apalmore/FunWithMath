@@ -43,31 +43,6 @@ public class Algorithms {
 			}
 		}
 	}
-	protected void printMenu() {
-		System.out.println("##############################################");
-		System.out.println("# Welcome To Fun With Algorithms             #");
-		System.out.println("#********************************************#");
-		System.out.println("#   Pleze Select A Item from the menu below  #");
-		System.out.println("#********************************************#");
-		System.out.println("| (0) Exit                                   |");
-		System.out.println("----------------------------------------------");
-		System.out.println("| (1) Euclid's Algorithum                    |");
-		System.out.println("----------------------------------------------");
-		System.out.println("| (2) Page Rank           [under development]|");
-		System.out.println("----------------------------------------------");
-		System.out.println("| (3) Boubble Sort                           |");
-		System.out.println("----------------------------------------------");
-		System.out.println("| (4) Quick Sort          [under development]|");
-		System.out.println("----------------------------------------------");
-		System.out.println("| (5) Merge Sort          [under development]|");
-		System.out.println("----------------------------------------------");
-		System.out.println("| (6) Simple Search       [under development]|");
-		System.out.println("----------------------------------------------");
-		System.out.println("| (7) Binary Search       [under development]|");
-		System.out.println("##############################################");
-		System.out.println();
-		System.out.print("Enter your chose >>: ");
-	}
 	protected void pauseForEnter(java.util.Scanner s) {
 		System.out.println("Press Enter To Retern to Main Menu...");
 		s.nextLine();

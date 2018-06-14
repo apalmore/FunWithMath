@@ -2,15 +2,15 @@ package com.austinpalmore.fun_with_math;
 public class MainMenu {
 	final static protected Display display = new Display();
 	final static protected java.util.Scanner console = new java.util.Scanner(System.in);
-	protected static String items[] = { "Exit","Numbers", "Algorithms", "Probability","Cryptograpy" };
+	protected static String items[] = { "Exit","Numbers", "Algorithms", "Cryptograpy","Probability" };
 	protected static String messages[] = {"Welcome To Fun With Math By Austin Palmore","Pleze Select A Item from the menu below"};
-	protected static boolean underDevelopment[] = { false,false,false,true,true };
+	protected static boolean underDevelopment[] = { false,false,false,false,true };
 	MainMenu() {
 		boolean run = true;
 		int input = -1;
 		java.util.Scanner console = new java.util.Scanner(System.in);
 		while(run) {
-			while(input < 0 || input > 4) {
+			while(input < 0 || input > items.length) {
 				new Menu(items,messages,underDevelopment);
 				input = getInt(console);
 			}
@@ -22,23 +22,26 @@ public class MainMenu {
 				case 1:
 					new Numbers(display,console);
 					input = -1;
-					pauseForEnter(console);
 					break;
 				case 2:
 				       	new Algorithms(display, console);
 					input = -1;
-					pauseForEnter(console);
 					break;
 				case 3:
-					new Probability(display,console);
-					input = -1;
-					pauseForEnter(console);
-					break;
-				case 4:
 					new Cryptograpy(display,console);
 					input = -1;
-					pauseForEnter(console);
 					break;
+				case 4:
+					new Probability(display,console);
+					input = -1;
+					break;
+				/*
+				case 5:
+					new Probability(display, console);
+					input = -1;
+					pauseForEnter(console);
+					break
+				*/
 				default:
 					run = false;
 					break;

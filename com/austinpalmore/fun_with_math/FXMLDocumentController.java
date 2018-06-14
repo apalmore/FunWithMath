@@ -19,7 +19,6 @@ import javafx.scene.control.SpinnerValueFactory;
  * @author User
  */
 @SuppressWarnings("rawtypes")
-@SuppressWarnings("unchecked")
 public class FXMLDocumentController implements Initializable {
     @FXML Label Label_1;
     @FXML Label Label_2;

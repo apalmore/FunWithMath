@@ -3,7 +3,7 @@ public class Probability {
 	protected static String items[] = { "Lottery Game","Factorials","Random Walk","Monte Carlo","Dice" };
 	protected static String messages[] = {"Welcome To Fun With Probability","Pleze Select A Item from the menu"};
 	protected static boolean underDevelopment[] = { true,true,true,true,true };
-	Probability(Display display, java.util.Scanner scan) {
+	Probability(Display display, java.util.Scanner scan,String args[]) {
 		boolean run = true;
 		int input = -1;
 		while(run) {
@@ -17,7 +17,7 @@ public class Probability {
 					run = false;
 					break;
 				case 1:
-					LotteryGame.driver();
+					Application1.driver(args);
 					input = -1;
 					pauseForEnter(scan);
 					break;

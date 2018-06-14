@@ -5,7 +5,7 @@ public class MainMenu {
 	protected static String items[] = { "Exit","Numbers", "Algorithms", "Cryptograpy","Probability" };
 	protected static String messages[] = {"Welcome To Fun With Math By Austin Palmore","Pleze Select A Item from the menu below"};
 	protected static boolean underDevelopment[] = { false,false,false,false,true };
-	MainMenu() {
+	MainMenu(String args[]) {
 		boolean run = true;
 		int input = -1;
 		java.util.Scanner console = new java.util.Scanner(System.in);
@@ -32,7 +32,7 @@ public class MainMenu {
 					input = -1;
 					break;
 				case 4:
-					new Probability(display,console);
+					new Probability(display,console,args);
 					input = -1;
 					break;
 				/*

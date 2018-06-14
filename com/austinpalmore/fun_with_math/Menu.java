@@ -1,11 +1,11 @@
 package com.austinpalmore.fun_with_math;
 public class Menu {
 	final private static int WIDTH = 52;
-	Menu(String items[], String messages[], boolean underDevelopment[]) {
+	Menu(String items[], String messages[]) {
 		DrawLine('#',WIDTH - 2,true);
 		showMessages(messages);
 		DrawBar('#','*');
-		addItems(items,underDevelopment);
+		addItems(items);
 		DrawLine('#',WIDTH - 2,true);
 		System.out.print("Enter your chose >>: ");
 	}
@@ -28,12 +28,9 @@ public class Menu {
 		if (newline)
 			System.out.println();
 	}
-	protected static void addItems(String items[], boolean underDevelopment[]) {
+	protected static void addItems(String items[]) {
 		for (int i = 0;i < items.length;i++) {
-			if(underDevelopment[i])
-				System.out.printf("|UD(%2d) %-"+ (WIDTH-12)+"s |%n",i,items[i]);
-			else
-				System.out.printf("|  (%2d) %-"+(WIDTH-12)+"s |%n",i,items[i]);
+			System.out.printf("|  (%2d) %-"+(WIDTH-12)+"s |%n",i,items[i]);
 			DrawBar('*','-');
 		}
 	}

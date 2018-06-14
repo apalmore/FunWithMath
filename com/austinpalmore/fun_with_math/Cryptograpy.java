@@ -2,7 +2,6 @@ package com.austinpalmore.fun_with_math;
 public class Cryptograpy {
 	private static String items[] = { "Exit","ROT13" };
 	private static String messages[] = {"Welcome To Fun With Cryptograpy","Pleze Select A Item from the menu below"};
-
 	Cryptograpy(Display display, java.util.Scanner scan) {
 		boolean run = true;
 		int input = -1;

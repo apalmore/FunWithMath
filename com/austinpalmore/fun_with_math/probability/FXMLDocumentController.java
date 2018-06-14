@@ -66,24 +66,24 @@ public class FXMLDocumentController implements Initializable {
     @SuppressWarnings("rawtypes")
     public void newRandomPick(ActionEvent event){
         Random rand = new Random();
-	@SuppressWarnings("unchecked")	
-	Pick_1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_6.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+	@SuppressWarnings("unchecked")
+	this.Pick_1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_6.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
     }
+    @SuppressWarnings("rawtypes")
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Random rand = new Random();
-        //SpinnerValueFactory<Integer> range = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,0);
-        Pick_1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
-        Pick_6.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
+        this.Pick_6.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
     }    
     
 }

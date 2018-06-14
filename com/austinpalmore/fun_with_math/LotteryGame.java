@@ -19,7 +19,8 @@ public class LotteryGame extends Application {
     }
 
     public static void driver() {
-        launch(null);
+	String [] args = {};
+        launch(args);
     }
     
 }

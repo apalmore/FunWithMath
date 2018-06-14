@@ -14,11 +14,12 @@ import javafx.scene.control.Label;
 import java.util.Random;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
-
-/**
+/*
  *
  * @author User
  */
+@SuppressWarnings("rawtypes")
+@SuppressWarnings("unchecked")
 public class FXMLDocumentController implements Initializable {
     @FXML Label Label_1;
     @FXML Label Label_2;
@@ -63,9 +64,9 @@ public class FXMLDocumentController implements Initializable {
         else if (match == 6) Submited.setText("This will never actualy happen");
         
     }
+    @SuppressWarnings("rawtypes")
     public void newRandomPick(ActionEvent event){
         Random rand = new Random();
-        //SpinnerValueFactory<Integer> range = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,0);
         this.Pick_1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
         this.Pick_2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));
         this.Pick_3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,65,rand.nextInt(65) + 1));

@@ -22,7 +22,7 @@ public class Algorithms {
 					pauseForEnter(scan);
 					break;
 				case 2:
-					(new BoubbleSort(15)).driver(15);
+					BoubbleSort.init();
 					input = -1;
 					pauseForEnter(scan);
 					break;

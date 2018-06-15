@@ -5,10 +5,10 @@ public class Search {
 	protected static void binarySearch() {
 		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
 		System.out.println("Creating Random set of 20 values non repeting [0,100]");
-		printArr(set);
+		System.out.println(java.util.Arrays.toString(set));
 		System.out.println("Sorting Set...");
 		boubbleSort(set);
-		printArr(set);
+		System.out.println(java.util.Arrays.toString(set));
 		System.out.print("Enter a number in the array: ");
 		int query = com.austinpalmore.fun_with_math.MainMenu.getInt(new java.util.Scanner(System.in));
 		System.out.println("Searching for " + query);
@@ -27,10 +27,10 @@ public class Search {
 	protected static void lenearSearch() {
 		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
 		System.out.println("Creating Random set of 20 values non repeting [0,100]");
-		printArr(set);
+		System.out.println(java.util.Arrays.toString(set));
 		System.out.println("Sorting Set...");
 		boubbleSort(set);
-		printArr(set);
+		System.out.println(java.util.Arrays.toString(set));
 		System.out.print("Enter a number in the array: ");
 		int query = com.austinpalmore.fun_with_math.MainMenu.getInt(new java.util.Scanner(System.in));
 		System.out.println("Searching for " + query);
@@ -41,13 +41,6 @@ public class Search {
 		}
 		if (index > 0) System.out.println(query + " Was found at index " + index);
 		else System.out.println(query + " is not contained in theis array");
-	}
-
-	private static void printArr(int arr[]) {
-		if(arr.length > 0) System.out.printf("[%3d]",arr[0]);
-		for(int i = 1; i < arr.length;i++)
-		       System.out.printf(",[%3d]",arr[i]);
-		System.out.println();
 	}
 	private static void boubbleSort(int[] arr) {
 		boolean swap = false;

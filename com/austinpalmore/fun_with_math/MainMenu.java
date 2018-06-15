@@ -3,7 +3,7 @@ public class MainMenu {
 	final static private com.austinpalmore.fun_with_math.util.Display display = new com.austinpalmore.fun_with_math.util.Display();
 	final static private java.util.Scanner console = new java.util.Scanner(System.in);
 	private static String items[] = { "Exit","Numbers", "Algorithms", "Cryptograpy"/*,"Probability"*/ };
-	private static String messages[] = {"Welcome To Fun With Math By Austin Palmore","Pleze Select A Item from the menu below"};
+	private static String messages[] = {"Welcome To Fun With Math By Austin Palmore","Please Select A Item from the menu below"};
 	MainMenu(String args[]) {
 		boolean run = true;
 		int input = -1;
@@ -41,14 +41,14 @@ public class MainMenu {
 		}
 	}
 	public static void pauseForEnter(java.util.Scanner console) {
-		System.out.println("Press Enter To Retern to Main Menu...");
+		System.out.println("Press Enter To Return to Main Menu...");
 		console.nextLine();
 		console.nextLine();
 	}
 	public static int getInt(java.util.Scanner console) {
 		while(!console.hasNextInt()) {
 			console.next();
-			System.err.print("\nEnter a intiger: ");
+			System.err.print("\nEnter a interger: ");
 		}
 		return console.nextInt();
 	}

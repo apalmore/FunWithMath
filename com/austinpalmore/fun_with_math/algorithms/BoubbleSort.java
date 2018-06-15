@@ -5,14 +5,14 @@ public class BoubbleSort {
 	private static int comps = 0;
 	public static void init() {
 		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
-		System.out.println("Creating Random set of 20 values non repeting [0,100]");
+		System.out.println("Creating Random set of 20 values non repeating [0,100]");
 		System.out.println(java.util.Arrays.toString(set));
 		int count = 0;
 		System.out.println("Sorting Set...");
 		while(boubblesort(set)) {
 			System.out.println(java.util.Arrays.toString(set));
 		}
-		System.out.println("The array is now sorted it took " + count + " passes, " + comps + " comparisins, and " + swap_count + " swaps");
+		System.out.println("The array is now sorted it took " + count + " passes, " + comps + " comparisons, and " + swap_count + " swaps");
 	}
 	protected static boolean boubblesort(int[] arr) {
 		boolean swap = false;

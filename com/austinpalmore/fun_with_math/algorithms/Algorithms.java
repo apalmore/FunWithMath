@@ -1,7 +1,7 @@
 package com.austinpalmore.fun_with_math.algorithms;
 public class Algorithms {
-	private static String items[] = { "Exit","Euclid's Algorithum", "Boubble Sort", "Simple Search", "Binary Search" };
-	private static String messages[] = {"Welcome To Fun With Algorithms","Pleze Select A Item from the menu below"};
+	private static String items[] = { "Exit","Euclid's Algorithum", "Bubble Sort", "Simple Search", "Binary Search" };
+	private static String messages[] = {"Welcome To Fun With Algorithms","Please Select A Item from the menu below"};
 
 	public Algorithms(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan) {
 		boolean run = true;
@@ -43,14 +43,14 @@ public class Algorithms {
 		}
 	}
 	public void pauseForEnter(java.util.Scanner s) {
-		System.out.println("Press Enter To Retern to Main Menu...");
+		System.out.println("Press Enter To Return to Main Menu...");
 		s.nextLine();
 		s.nextLine();
 	}
 	public static int getInt(java.util.Scanner console) {
 		while(!console.hasNextInt()) {
 			console.next();
-			System.err.print("\nEnter a intiger: ");
+			System.err.print("\nEnter a interger: ");
 		}
 		return console.nextInt();
 	}

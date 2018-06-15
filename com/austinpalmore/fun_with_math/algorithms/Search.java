@@ -4,7 +4,7 @@ public class Search {
 	
 	protected static void binarySearch() {
 		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
-		System.out.println("Creating Random set of 20 values non repeting [0,100]");
+		System.out.println("Creating Random set of 20 values non-repeating [0,100]");
 		System.out.println(java.util.Arrays.toString(set));
 		System.out.println("Sorting Set...");
 		boubbleSort(set);
@@ -26,7 +26,7 @@ public class Search {
 	}
 	protected static void lenearSearch() {
 		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
-		System.out.println("Creating Random set of 20 values non repeting [0,100]");
+		System.out.println("Creating Random set of 20 values non-repeating [0,100]");
 		System.out.println(java.util.Arrays.toString(set));
 		System.out.println("Sorting Set...");
 		boubbleSort(set);
@@ -36,11 +36,11 @@ public class Search {
 		System.out.println("Searching for " + query);
 		int index = -1;
 		for(int i = 0;i < set.length && index < 0;i++) {
-			System.out.println("Seraching index " + i);
+			System.out.println("Searching index " + i);
 			if(set[i] == query) index = i;
 		}
 		if (index > 0) System.out.println(query + " Was found at index " + index);
-		else System.out.println(query + " is not contained in theis array");
+		else System.out.println(query + " is not contained in these array");
 	}
 	private static void boubbleSort(int[] arr) {
 		boolean swap = false;

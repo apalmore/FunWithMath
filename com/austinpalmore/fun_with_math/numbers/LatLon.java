@@ -27,7 +27,7 @@ public class LatLon {
 				return n < -180 || n > 180;
 			}	
 		});
-		System.out.println(Point.getDist(new Point(lat1,lon1),new Point(lat2,lon2)) + " Meters"); 	
+		System.out.println(Point.getDist(new Point(lat1,lon1),new Point(lat2,lon2)) + " Kilometers"); 	
 
 	}
 }

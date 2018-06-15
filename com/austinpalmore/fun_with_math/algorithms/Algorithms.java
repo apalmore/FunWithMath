@@ -1,6 +1,6 @@
 package com.austinpalmore.fun_with_math.algorithms;
 public class Algorithms {
-	private static String items[] = { "Exit","Euclid's Algorithum", "Bubble Sort", "Simple Search", "Binary Search" };
+	private static String items[] = { "Exit","Euclid's Algorithum", "Bubble Sort", "Simple Search", "Binary Search", "Merge Sort Top Down" };
 	private static String messages[] = {"Welcome To Fun With Algorithms","Please Select A Item from the menu below"};
 
 	public Algorithms(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan) {
@@ -36,6 +36,10 @@ public class Algorithms {
 					input = -1;
 					pauseForEnter(scan);
 					break;
+				case 5:
+					MergeSort.init();
+					input = -1;
+					pauseForEnter(scan);
 				default:
 					run = false;
 					break;

@@ -1,18 +1,18 @@
 package com.austinpalmore.fun_with_math.algorithms;
 public class BoubbleSort {
-	private static final int ARRAY_SIZE = 20;
+	private static final int ARRAY_SIZE = 30;
 	private static int swap_count = 0;
 	private static int comps = 0;
 	public static void init() {
-		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,(ARRAY_SIZE * 5));
-		System.out.println("Creating Random set of 20 values non repeating [0,100]");
+		int[] set = RandomSet.getRangedSet(ARRAY_SIZE,100);
+		System.out.println("Creating Random set of " + ARRAY_SIZE + " values non repeating [0,100]");
 		System.out.println(java.util.Arrays.toString(set));
 		int count = 0;
 		System.out.println("Sorting Set...");
 		while(boubblesort(set)) {
 			System.out.println(java.util.Arrays.toString(set));
 		}
-		System.out.println("The array is now sorted it took " + count + " passes, " + comps + " comparisons, and " + swap_count + " swaps");
+		System.out.println("The array is now sorted it took " + comps + " comparisons, and " + swap_count + " swaps");
 	}
 	protected static boolean boubblesort(int[] arr) {
 		boolean swap = false;

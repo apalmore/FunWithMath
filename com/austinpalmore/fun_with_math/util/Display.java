@@ -21,7 +21,7 @@ public class Display {
 		})).start();
 	}
 	public static int getIntFromUser(String prompt, Tester t) {
-		int i = -1;
+		int i = -200;
 		java.util.Scanner consul = null;
 		while (t.test(i)) {
 			try {

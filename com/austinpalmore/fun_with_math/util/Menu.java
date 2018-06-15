@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.util;
 public class Menu {
 	final private static int WIDTH = 52;
 	public Menu(String items[], String messages[]) {

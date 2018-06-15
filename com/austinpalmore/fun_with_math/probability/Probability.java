@@ -7,7 +7,7 @@ public class Probability {
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > 5) {
-				new com.austinpalmore.fun_with_math.Menu(items,messages);
+				new com.austinpalmore.fun_with_math.util.Menu(items,messages);
 				input = getInt(scan);
 			}
 			switch (input) {

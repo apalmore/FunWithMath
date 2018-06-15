@@ -10,7 +10,7 @@ public class MainMenu {
 		java.util.Scanner console = new java.util.Scanner(System.in);
 		while(run) {
 			while(input < 0 || input > items.length) {
-				new Menu(items,messages);
+				new com.austinpalmore.fun_with_math.util.Menu(items,messages);
 				input = getInt(console);
 			}
 			switch (input) {

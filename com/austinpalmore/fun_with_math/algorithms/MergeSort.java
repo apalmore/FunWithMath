@@ -1,4 +1,4 @@
-package com.austinpalmore.fun_with_math;
+package com.austinpalmore.fun_with_math.algorithms;
 public class MergeSort extends Sort {
 	MergeSort(int n) {
 		super(n);

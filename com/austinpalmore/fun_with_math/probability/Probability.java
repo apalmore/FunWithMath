@@ -16,7 +16,11 @@ public class Probability {
 					run = false;
 					break;
 				case 1:
-					Application1.driver(args);
+					try {
+						com.austinpalmore.fun_with_math.javaFX.lottery.Lottery.init(args);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 					input = -1;
 					pauseForEnter(scan);
 					break;

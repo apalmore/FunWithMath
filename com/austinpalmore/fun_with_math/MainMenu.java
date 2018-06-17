@@ -2,7 +2,7 @@ package com.austinpalmore.fun_with_math;
 public class MainMenu {
 	final static private com.austinpalmore.fun_with_math.util.Display display = new com.austinpalmore.fun_with_math.util.Display();
 	final static private java.util.Scanner console = new java.util.Scanner(System.in);
-	private static String items[] = { "Exit","Numbers", "Algorithms", "Cryptograpy"/*,"Probability"*/ };
+	private static String items[] = { "Exit","Numbers", "Algorithms", "Cryptograpy","Probability" };
 	private static String messages[] = {"Welcome To Fun With Math By Austin Palmore","Please Select A Item from the menu below"};
 	MainMenu(String args[]) {
 		boolean run = true;
@@ -30,10 +30,10 @@ public class MainMenu {
 					new com.austinpalmore.fun_with_math.cryptograpy.Cryptograpy(display,console);
 					input = -1;
 					break;
-				/*case 4:
+				case 4:
 					new com.austinpalmore.fun_with_math.probability.Probability(display,console,args);
 					input = -1;
-					break;*/
+					break;
 				default:
 					run = false;
 					break;

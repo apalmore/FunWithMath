@@ -8,4 +8,4 @@ cd bin
 #jar cfm ../FunWithMath.jar Manifest.txt com/austinpalmore/fun_with_math/* com/austinpalmore/fun_with_math/probability/FXMLDocument.fxml
 jar cfm ../FunWithMath.jar Manifest.txt com/austinpalmore/fun_with_math/*
 cd ..
-rm -rf primes.txt complex.txt bin/com/austinpalmore/fun_with_math/*.class  bin/com/austinpalmore/fun_with_math/{algorithms,cryptograpy,numbers,probability,util}/*.class
+rm -rf primes.txt complex.txt bin/com/*

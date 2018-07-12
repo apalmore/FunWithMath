@@ -20,7 +20,7 @@ final public class Prime {
 		COMPLEX_CONJUGATE_STRING = ComplexConjugateToString(COMPLEX_CONJUGATE);
 		counter();
 	}
-	private boolean isPrime(int n,double sr) {
+	public static boolean isPrime(int n,double sr) {
 		if(n == 2 || n == 5) return true;
 		if(n < 3 || n % 2 == 0 || n % 5 == 0) return false;
 		int range = (int)(sr + 1);

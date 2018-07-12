@@ -1,6 +1,6 @@
 package com.austinpalmore.fun_with_math.cryptograpy;
 public class Cryptograpy {
-	private static String items[] = { "Exit","ROT13" };
+	private static String items[] = { "Exit","ROT13",/*"Prime Generator"*/ };
 	private static String messages[] = {"Welcome To Fun With Cryptograpy","Pleze Select A Item from the menu below"};
 	public Cryptograpy(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan) {
 		boolean run = true;
@@ -20,6 +20,12 @@ public class Cryptograpy {
 					input = -1;
 					pauseForEnter(scan);
 					break;
+				/*case 2:
+					Primegenerator pg = new Primegenerator(1,100);
+					input = -1;
+					pauseForEnter(scan);
+					break;
+				*/
 				default:
 					run = false;
 					break;

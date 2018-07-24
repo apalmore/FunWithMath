@@ -1,10 +1,11 @@
 package com.austinpalmore.fun_with_math.algorithms;
+import com.austinpalmore.fun_with_math.*;
 public class EuclidsAlgorithm {
 	public static void driver() {
 		System.out.println("Enter a number: ");
-		int x = Algorithms.getInt(new java.util.Scanner(System.in));
+		int x = Main.getInt();
 		System.out.println("Enter a smaller number: ");
-		int y = Algorithms.getInt(new java.util.Scanner(System.in));
+		int y = Main.getInt();
 		gcd(x,y);
 	}
 

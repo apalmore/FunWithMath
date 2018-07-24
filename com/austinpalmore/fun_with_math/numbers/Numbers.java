@@ -1,14 +1,15 @@
 package com.austinpalmore.fun_with_math.numbers;
+import com.austinpalmore.fun_with_math.*;
 public class Numbers {
-	private static String items[] = { "Exit","Fun With Primes", "Fibinachi Numbers","GPS" };
+	private static String items[] = { "Exit","Fun With Primes", "Fibinachi Numbers","GPS", "Factor to primes" };
 	private static String messages[] = {"Welcome To Fun With Numbers","Pleze Select A Item from the menu below"};
-	public Numbers(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan) {
+	public Numbers() {
 		boolean run = true;
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > items.length) {
 				new com.austinpalmore.fun_with_math.util.Menu(items,messages);
-				input = getInt(scan);
+				input = Main.getInt();
 			}
 			switch (input) {
 				case 0:
@@ -16,35 +17,27 @@ public class Numbers {
 					run = false;
 					break;
 				case 1:
-					Primes.driver(display, scan);
+					Primes.driver();
 					input = -1;
-					pauseForEnter(scan);
+					Main.pauseForEnter();
 					break;
 				case 2:
 				       	Fibinacci.driver(91);
 					input = -1;
-					pauseForEnter(scan);
+					Main.pauseForEnter();
 					break;
 				case 3:
 					LatLon.init();
 					input = -1;
-					pauseForEnter(scan);
+					Main.pauseForEnter();
+				case 4:
+					Factor.init();
+					input = -1;
+					Main.pauseForEnter();
 				default:
 					run = false;
 					break;
 			}
 		}
-	}
-	private static void pauseForEnter(java.util.Scanner s) {
-		System.out.println("Press Enter To Retern to Main Menu...");
-		s.nextLine();
-		s.nextLine();
-	}
-	private static int getInt(java.util.Scanner console) {
-		while(!console.hasNextInt()) {
-			console.next();
-			System.err.print("\nEnter a intiger: ");
-		}
-		return console.nextInt();
 	}
 }

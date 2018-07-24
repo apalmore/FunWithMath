@@ -1,4 +1,5 @@
 package com.austinpalmore.fun_with_math.algorithms;
+import com.austinpalmore.fun_with_math.*;
 public class Search {
 	public final static int ARRAY_SIZE = 20;
 	
@@ -10,7 +11,7 @@ public class Search {
 		boubbleSort(set);
 		System.out.println(java.util.Arrays.toString(set));
 		System.out.print("Enter a number in the array: ");
-		int query = com.austinpalmore.fun_with_math.MainMenu.getInt(new java.util.Scanner(System.in));
+		int query = Main.getInt();
 		System.out.println("Searching for " + query);
 		int index = binary(set,0,set.length,query);
 		if (index > 0) System.out.println(query + " Was found at index " + index);
@@ -32,7 +33,7 @@ public class Search {
 		boubbleSort(set);
 		System.out.println(java.util.Arrays.toString(set));
 		System.out.print("Enter a number in the array: ");
-		int query = com.austinpalmore.fun_with_math.MainMenu.getInt(new java.util.Scanner(System.in));
+		int query = Main.getInt();
 		System.out.println("Searching for " + query);
 		int index = -1;
 		for(int i = 0;i < set.length && index < 0;i++) {

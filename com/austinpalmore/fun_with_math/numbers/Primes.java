@@ -99,7 +99,7 @@ final public class Primes {
 		sb.append("\n");
 		return sb.toString();
 	}
-	public static void driver(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan) {
+	public static void driver() {
 		final int threadCount = Runtime.getRuntime().availableProcessors();
 		String message = "Enter the max range for the prime function that is a multiple of " + threadCount + " and greater than " + threadCount * 2 + ": ";
 		int max = com.austinpalmore.fun_with_math.util.Display.getIntFromUser(message,new com.austinpalmore.fun_with_math.util.Tester() {
@@ -125,8 +125,10 @@ final public class Primes {
 		} catch (InterruptedException e) {
 			System.err.println(e);
 		}
-		display.DisplayTextBox("Complex",Primes.printComplex(System.out,p));
-		display.DisplayTextBox("Primes",Primes.printPrimes(System.out,p));
+		Primes.printComplex(System.out,p);
+		Primes.printPrimes(System.out,p);
+		//display.DisplayTextBox("Complex",Primes.printComplex(System.out,p));
+		//display.DisplayTextBox("Primes",Primes.printPrimes(System.out,p));
 	
 		try (
 			java.io.PrintStream ps1 = new java.io.PrintStream(new java.io.File("primes.txt")); 

@@ -3,14 +3,6 @@ import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class Display {
-	/*public void DisplayTextBox(final String title, final String text) {
-		(new Thread(new Runnable() {
-			@Override
-			public void run() {
-				new TextBox(title,text);
-			}
-		})).start();
-	}*/
 	public static void DisplayMessage(String m) {
 		final String message = m;
 		(new Thread(new Runnable() {

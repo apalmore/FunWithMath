@@ -1,6 +1,7 @@
 package com.austinpalmore.fun_with_math.algorithms;
 import com.austinpalmore.fun_with_math.*;
 import com.austinpalmore.fun_with_math.util.*;
+
 public class Algorithms {
 	private static String items[] = { "Exit","Euclid's Algorithum", "Bubble Sort", "Simple Search", "Binary Search", "Merge Sort Top Down" };
 	private static String messages[] = {"Welcome To Fun With Algorithms","Please Select A Item from the menu below"};

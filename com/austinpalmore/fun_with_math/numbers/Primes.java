@@ -77,41 +77,33 @@ final public class Primes {
 			});
 		}
 	}
-	public static String printPrimes(java.io.PrintStream ps,Primes... p) {
+	public static String printPrimes(Primes... p) {
 		java.lang.StringBuilder sb = new java.lang.StringBuilder();
-		ps.print("2");
 		sb.append("2");
-		for (int i = 0;i < p.length;i++) {
-			ps.print(p[i].getPrimes());
+		for (int i = 0;i < p.length;i++)
 			sb.append(p[i].getPrimes());
-		}
-		ps.println();
 		sb.append("\n");
 		return sb.toString();
 	}
-	public static String printComplex(java.io.PrintStream ps,Primes... p) {
+	public static String printComplex(Primes... p) {
 		java.lang.StringBuilder sb = new java.lang.StringBuilder();
-		ps.print("2;(1+i)(1-i)");
 		sb.append("2;(1+i)(1-i)");
-		for (int i = 0;i < p.length;i++) {
-			ps.print(p[i].getComplex());
+		for (int i = 0;i < p.length;i++)
 			sb.append(p[i].getComplex());
-		}
-		ps.println();
 		sb.append("\n");
 		return sb.toString();
 	}
 	public static void driver() {
 		final int threadCount = Runtime.getRuntime().availableProcessors();
 		String message = "Enter the max range for the prime function that is a multiple of " + threadCount + " and greater than " + threadCount * 2 + ": ";
-		int max = com.austinpalmore.fun_with_math.util.Display.getIntFromUser(message,new com.austinpalmore.fun_with_math.util.Tester() {
+		int max = Display.getIntFromUser(message,new Tester() {
 			@Override
 			public boolean test(int n) {
 				return n % Runtime.getRuntime().availableProcessors() != 0 || n <= (Runtime.getRuntime().availableProcessors() * 2);
 			}
 		});
 		final int primesPerThread = max / threadCount;
-		com.austinpalmore.fun_with_math.util.Display.DisplayMessage("I predict that there will be " + Primes.logical.getPrimeCountEstimation(primesPerThread * threadCount) + " Primes to " + primesPerThread * threadCount);
+		Display.DisplayMessage("I predict that there will be " + Primes.logical.getPrimeCountEstimation(primesPerThread * threadCount) + " Primes to " + primesPerThread * threadCount);
 
 		Primes[] p = new Primes[threadCount];
 		for (int i = 0;i < threadCount;i++) p[i] = new Primes();
@@ -127,19 +119,13 @@ final public class Primes {
 		} catch (InterruptedException e) {
 			System.err.println(e);
 		}
-		//Primes.printComplex(System.out,p);
-		//Primes.printPrimes(System.out,p);
-		new TextWindow("Complex",Primes.printComplex(System.out,p));
-		new TextWindow("Primes",Primes.printPrimes(System.out,p));
-	
-		try (
-			java.io.PrintStream ps1 = new java.io.PrintStream(new java.io.File("primes.txt")); 
-			java.io.PrintStream ps2 = new java.io.PrintStream(new java.io.File("complex.txt"));
-		) {
-			Primes.printPrimes(ps1,p);
-			Primes.printComplex(ps2,p);
-		} catch (java.io.FileNotFoundException e) {
-			System.err.println(e);
-		}
+		OutputManager out1 = new OutputManager();
+		OutputManager out2 = new OutputManager();
+		out1.println(Primes.printComplex(p));
+		out2.println(Primes.printPrimes(p));
+		out1.save("Complex.txt");
+		out1.dispWindow("Complex");
+		out2.dispWindow("Primes");
+		out2.save("Primes.txt");
 	}
 }

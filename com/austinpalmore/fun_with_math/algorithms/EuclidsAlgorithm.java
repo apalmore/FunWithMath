@@ -1,27 +1,33 @@
 package com.austinpalmore.fun_with_math.algorithms;
 import com.austinpalmore.fun_with_math.*;
+import com.austinpalmore.fun_with_math.util.OutputManager;
+
 public class EuclidsAlgorithm {
 	public static void driver() {
-		System.out.println("Enter a number: ");
+		OutputManager out = new OutputManager();
+		out.println("Enter a number: ");
 		int x = Main.getInt();
-		System.out.println("Enter a smaller number: ");
+		out.noConsole("" + x + "\n");
+		out.println("Enter a smaller number: ");
 		int y = Main.getInt();
-		gcd(x,y);
+		out.noConsole("" + y + "\n");
+		gcd(x,y,out);
+		out.dispWindow("Euclids Algorithm");
 	}
 
-	private static void gcd(int x,int y) {
+	private static void gcd(int x,int y, OutputManager out) {
 		int a = x, b = y;
-		System.out.printf("A = %d%nB = %d%n",a,b);
+		out.print(String.format("A = %d%nB = %d%n",a,b));
 		int t;
 		while(b != 0) {
 			t = b;
-			System.out.println("T = B = " + t);
+			out.println("T = B = " + t);
 			b = a % b;
-			System.out.println("B = A MOD B = " + a + " MOD " + t + " = " + b);
+			out.println("B = A MOD B = " + a + " MOD " + t + " = " + b);
 			a = t;
-			System.out.println("A = T = " + t);
+			out.println("A = T = " + t);
 		}
-		System.out.println("T = 0 Stoping");
-		System.out.println("The GCD of " + x + " and " + y + " is " + a);
+		out.println("T = 0 Stoping");
+		out.println("The GCD of " + x + " and " + y + " is " + a);
 	}
 }

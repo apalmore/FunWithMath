@@ -43,19 +43,22 @@ public class Lottery {
 			super("Lottery Game 1 in " + lottery.getOdds());
 			this.wining_numbers = lottery.getWining();
                         this.other_numbers = lottery.getOther();
-			setSize(500,300);
+			setSize(600,161);//this is praportional to the golden ratio
                         this.panel[0] = new JPanel(new GridLayout(2,1));
 
                         this.panel[1] = new JPanel(new GridLayout(1,6));
 			for(int i = 0;i < 6;i++) {
 				this.button[0][i] = new JButton("?");
 				this.button[0][i].addActionListener(this);
+				this.button[0][i].setFont(new Font("Arial", Font.PLAIN, 45));
                         	this.panel[1].add(this.button[0][i]);
                         }
 
                         this.panel[2] = new JPanel(new GridLayout(1,6));
                         for(int i = 0;i < 6;i++) {
                                 this.button[1][i] = new JButton("" + this.other_numbers[i]);
+				this.button[1][i].addActionListener(this);
+				this.button[1][i].setFont(new Font("Arial", Font.PLAIN, 45));
                                 this.panel[2].add(this.button[1][i]);
                         }
 
@@ -66,7 +69,7 @@ public class Lottery {
 		}
 		public void actionPerformed(ActionEvent event) {
 			for(int i = 0;i < 6;i++) {
-				if( event.getSource() == this.button[0][i] ) {
+				if( event.getSource() == this.button[0][i] || event.getSource() == this.button[1][i] ) {
 					this.button[0][i].setText("" + this.wining_numbers[i]);
 					if(this.wining_numbers[i] == this.other_numbers[i]) {
 						this.button[0][i].setBackground(Color.green);

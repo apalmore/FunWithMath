@@ -1,14 +1,17 @@
 package com.austinpalmore.fun_with_math.probability;
+import com.austinpalmore.fun_with_math.*;
+import com.austinpalmore.fun_with_math.util.*;
+
 public class Probability {
 	private static String items[] = { "Exit","Lottery Game" };
 	private static String messages[] = {"Welcome To Fun With Probability","Pleze Select A Item from the menu"};
-	public Probability(com.austinpalmore.fun_with_math.util.Display display, java.util.Scanner scan,String args[]) {
+	public Probability() {
 		boolean run = true;
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > 5) {
-				new com.austinpalmore.fun_with_math.util.Menu(items,messages);
-				input = getInt(scan);
+				new Menu(items,messages);
+				input = Main.getInt(scan);
 			}
 			switch (input) {
 				case 0:
@@ -17,7 +20,7 @@ public class Probability {
 					break;
 				case 1:
 					try {
-						com.austinpalmore.fun_with_math.javaFX.lottery.Lottery.init(args);
+						//com.austinpalmore.fun_with_math.javaFX.lottery.Lottery.init(args);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

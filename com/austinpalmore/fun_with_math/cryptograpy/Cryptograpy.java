@@ -1,5 +1,7 @@
 package com.austinpalmore.fun_with_math.cryptograpy;
 import com.austinpalmore.fun_with_math.*;
+import com.austinpalmore.fun_with_math.util.*;
+
 public class Cryptograpy {
 	private static String items[] = { "Exit","ROT13",/*"Prime Generator"*/ };
 	private static String messages[] = {"Welcome To Fun With Cryptograpy","Pleze Select A Item from the menu below"};
@@ -8,7 +10,7 @@ public class Cryptograpy {
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > items.length) {
-				new com.austinpalmore.fun_with_math.util.Menu(items,messages);
+				new Menu(items,messages);
 				input = Main.getInt();
 			}
 			switch (input) {

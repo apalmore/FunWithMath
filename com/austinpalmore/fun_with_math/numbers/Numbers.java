@@ -1,5 +1,7 @@
 package com.austinpalmore.fun_with_math.numbers;
 import com.austinpalmore.fun_with_math.*;
+import com.austinpalmore.fun_with_math.util.*;
+
 public class Numbers {
 	private static String items[] = { "Exit","Fun With Primes", "Fibinachi Numbers","GPS", "Factor to primes" };
 	private static String messages[] = {"Welcome To Fun With Numbers","Pleze Select A Item from the menu below"};
@@ -8,7 +10,7 @@ public class Numbers {
 		int input = -1;
 		while(run) {
 			while(input < 0 || input > items.length) {
-				new com.austinpalmore.fun_with_math.util.Menu(items,messages);
+				new Menu(items,messages);
 				input = Main.getInt();
 			}
 			switch (input) {

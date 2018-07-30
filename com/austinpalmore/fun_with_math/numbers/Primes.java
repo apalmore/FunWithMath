@@ -1,4 +1,6 @@
 package com.austinpalmore.fun_with_math.numbers;
+import com.austinpalmore.fun_with_math.util.*;
+
 final public class Primes {
 	private int lcs = 1;
 	private String primes = "";
@@ -125,10 +127,10 @@ final public class Primes {
 		} catch (InterruptedException e) {
 			System.err.println(e);
 		}
-		Primes.printComplex(System.out,p);
-		Primes.printPrimes(System.out,p);
-		//display.DisplayTextBox("Complex",Primes.printComplex(System.out,p));
-		//display.DisplayTextBox("Primes",Primes.printPrimes(System.out,p));
+		//Primes.printComplex(System.out,p);
+		//Primes.printPrimes(System.out,p);
+		new TextWindow("Complex",Primes.printComplex(System.out,p));
+		new TextWindow("Primes",Primes.printPrimes(System.out,p));
 	
 		try (
 			java.io.PrintStream ps1 = new java.io.PrintStream(new java.io.File("primes.txt")); 

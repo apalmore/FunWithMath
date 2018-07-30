@@ -3,15 +3,15 @@ import com.austinpalmore.fun_with_math.*;
 import com.austinpalmore.fun_with_math.util.*;
 
 public class Probability {
-	private static String items[] = { "Exit","Lottery Game" };
+	private static String items[] = { "Exit","Lottery Game (eazy Mode)","Lottery Game (realistic)" };
 	private static String messages[] = {"Welcome To Fun With Probability","Pleze Select A Item from the menu"};
 	public Probability() {
 		boolean run = true;
 		int input = -1;
 		while(run) {
-			while(input < 0 || input > 5) {
+			while(input < 0 || input > 2) {
 				new Menu(items,messages);
-				input = Main.getInt(scan);
+				input = Main.getInt();
 			}
 			switch (input) {
 				case 0:
@@ -19,50 +19,19 @@ public class Probability {
 					run = false;
 					break;
 				case 1:
-					try {
-						//com.austinpalmore.fun_with_math.javaFX.lottery.Lottery.init(args);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+					new Lottery(true);//starting Lottery in Training mode
 					input = -1;
-					pauseForEnter(scan);
+					Main.pauseForEnter();
 					break;
-				case 2:
-					System.out.println("This is not yet avaliable");
-					input = -1;
-					pauseForEnter(scan);
-					break;
-				case 3:
-					System.out.println("This is not yet avaliable");
-					input = -1;
-					pauseForEnter(scan);
-					break;
-				case 4:
-					System.out.println("This is not yet avaliable");
-					input = -1;
-					pauseForEnter(scan);
-					break;
-				case 5:
-					System.out.println("This is not yet avaliable");
-					input = -1;
-					pauseForEnter(scan);
-					break;
+                                case 2:
+                                        new Lottery(false);//starting Lottery in Real world odds mode
+                                        input = -1;
+                                        Main.pauseForEnter();
+                                        break;
 				default:
 					run = false;
 					break;
 			}
 		}
-	}
-	private static void pauseForEnter(java.util.Scanner s) {
-		System.out.println("Press Enter To Retern to Main Menu...");
-		s.nextLine();
-		s.nextLine();
-	}
-	private static int getInt(java.util.Scanner console) {
-		while(!console.hasNextInt()) {
-			console.next();
-			System.err.print("\nEnter a intiger: ");
-		}
-		return console.nextInt();
 	}
 }
